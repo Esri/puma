@@ -87,7 +87,7 @@ RHINOPRT_API bool Generate(const wchar_t* rpk_path, ON_wString* errorMsg,
                            ON_SimpleArray<ON_Mesh*>* pMeshArray,
 							
 						   // Materials,
-                           ON_SimpleArray<int>* pColorsArray, ON_SimpleArray<int>* pMatIndices,
+                           ON_SimpleArray<double>* pColorsArray, ON_SimpleArray<int>* pMatIndices,
                            ON_ClassArray<ON_wString>* pTexKeys, ON_ClassArray<ON_wString>* pTexPaths,
 	
 						   // Reports

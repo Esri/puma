@@ -214,7 +214,7 @@ void appendToRhinoString(ON_wString& rhinoString, const std::wstring& appendee) 
 	rhinoString += appendee.c_str();
 }
 
-void appendColor(const ON_Color& color, ON_SimpleArray<int>* pArray){
+void appendColor(const ON_Color& color, ON_SimpleArray<double>* pArray){
 	pArray->Append(color.Red());
 	pArray->Append(color.Green());
 	pArray->Append(color.Blue());
@@ -390,7 +390,7 @@ void unpackBoolAttributes(int start, int count, ON_ClassArray<ON_wString>* keys,
 		const std::wstring key(keys->At(i)->Array());
 
 		const int value(*values->At(i));
-		pcu::fillMapBuilder<bool>(key, static_cast<bool>(value), aBuilder);
+		pcu::fillMapBuilder(key, static_cast<bool>(value), aBuilder);
 	}
 }
 

@@ -134,7 +134,7 @@ namespace PumaGrasshopper
             IntPtr pErrorMsg = errorMsg.NonConstPointer;
 
             // Materials
-            var colorsArray = new SimpleArrayInt();
+            var colorsArray = new SimpleArrayDouble();
             IntPtr pColorsArray = colorsArray.NonConstPointer();
             var matIndices = new SimpleArrayInt();
             IntPtr pMatIndices = matIndices.NonConstPointer();
@@ -199,11 +199,14 @@ namespace PumaGrasshopper
             boolWrapper.Dispose();
             doubleWrapper.Dispose();
             stringWrapper.Dispose();
+            boolArrayWrapper.Dispose();
+            doubleArrayWrapper.Dispose();
+            stringArrayWrapper.Dispose();
 
             var meshCountsArray = meshCounts.ToArray();
             var meshesArray = meshes.ToNonConstArray();
             // Materials
-            int[] colors = colorsArray.ToArray();
+            double[] colors = colorsArray.ToArray();
             int[] materialIndices = matIndices.ToArray();
             string[] textureKeys = texKeys.ToArray();
             string[] texturePaths = texPaths.ToArray();
@@ -249,9 +252,9 @@ namespace PumaGrasshopper
 
                     Material mat = new Material()
                     {
-                        DiffuseColor = Color.FromArgb(diffuse[0], diffuse[1], diffuse[2]),
-                        AmbientColor = Color.FromArgb(ambient[0], ambient[1],ambient[2]),
-                        SpecularColor = Color.FromArgb(specular[0], specular[1], specular[2]),
+                        DiffuseColor = Color.FromArgb((int)diffuse[0], (int)diffuse[1], (int)diffuse[2]),
+                        AmbientColor = Color.FromArgb((int)ambient[0], (int)ambient[1], (int)ambient[2]),
+                        SpecularColor = Color.FromArgb((int)specular[0], (int)specular[1], (int)specular[2]),
                         Transparency = 1.0 - opacity,
                         Shine = shininess,
                         FresnelReflections = true,
