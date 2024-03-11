@@ -110,7 +110,7 @@ def build(rh_target, build_mode: str, build_dir: Path, package_dir: Path, v_majo
 
 def parse_args():
     arg_parser = argparse.ArgumentParser()
-    arg_parser.add_argument('--rhino-target', default='7', choices=['6', '7'],
+    arg_parser.add_argument('--rhino-target', default='7', choices=['6', '7', '8'],
                             help='The target rhino major version to build yak for.')
     arg_parser.add_argument('--build-module', default='both', choices=['both', 'rhi', 'yak'],
                             help='The package to build.')
@@ -127,7 +127,7 @@ def update_yml_manifest(root_path, v_major, v_minor, v_revision, v_build, rh_tar
     template_file.close()
 
     template = Template(template_string)
-    if rh_target == '7':
+    if rh_target == '7' or rh_target == '8':
         generated_manifest = template.substitute(VERSION_MAJOR=v_major, VERSION_MINOR=v_minor,
                                                  VERSION_REVISION=v_revision, VERSION_BUILD=v_build)
     else:
