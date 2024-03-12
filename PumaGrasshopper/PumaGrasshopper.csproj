@@ -11,7 +11,7 @@
       <VersionMajor>%(PumaVersions.VERSION_MAJOR)</VersionMajor>
       <VersionMinor>%(PumaVersions.VERSION_MINOR)</VersionMinor>
       <VersionBuild>$(PumaVersionBuild)</VersionBuild>
-	  <VersionBuild Condition="'$(PumaVersionBuild)'==''">%(PumaVersions.VERSION_BUILD)</VersionBuild>
+      <VersionBuild Condition="'$(PumaVersionBuild)'==''">%(PumaVersions.VERSION_BUILD)</VersionBuild>
       <VersionRevision>%(PumaVersions.VERSION_REVISION)</VersionRevision>
     </PropertyGroup>
     <ReadLinesFromFile File=".\Properties\AssemblyVersion.template">
@@ -101,7 +101,7 @@
     </Compile>
     <Compile Include="InteropWrapper.cs" />
     <Compile Include="Properties\AssemblyVersion.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" >
+    <Compile Include="Properties\AssemblyInfo.cs">
       <DependentUpon>Properties\AssemblyVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
