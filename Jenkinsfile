@@ -38,6 +38,7 @@ properties([ disableConcurrentBuilds() ])
 
 @Field final Map RHINO6_CONFIG = [ rh: '6.35.21222.17001', rhsdk: '6.35.21222.17001', py: '3.9.13' ]
 @Field final Map RHINO7_CONFIG = [ rh: '7.17.22102.5001',  rhsdk: '7.19.22165.13001', py: '3.9.13' ]
+@Field final Map RHINO8_CONFIG = [ rh: '8.3.24009.15001', rhsdk: '8.3.24009.15001', py: '3.9.13' ]
 
 @Field final List CONFIGS_PREPARE = [
     WINDOWS_NATIVE_CONFIG
@@ -46,6 +47,7 @@ properties([ disableConcurrentBuilds() ])
 @Field final List CONFIGS = [
 	composeConfig(RHINO6_CONFIG, WINDOWS_NATIVE_CONFIG, WINDOWS_DOCKER_CONFIG),
 	composeConfig(RHINO7_CONFIG, WINDOWS_NATIVE_CONFIG, WINDOWS_DOCKER_CONFIG),
+	composeConfig(RHINO8_CONFIG, WINDOWS_NATIVE_CONFIG, WINDOWS_DOCKER_CONFIG),
 ]
 
 
