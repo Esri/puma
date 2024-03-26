@@ -11,7 +11,7 @@
       <VersionMajor>%(PumaVersions.VERSION_MAJOR)</VersionMajor>
       <VersionMinor>%(PumaVersions.VERSION_MINOR)</VersionMinor>
       <VersionBuild>$(PumaVersionBuild)</VersionBuild>
-	  <VersionBuild Condition="'$(PumaVersionBuild)'==''">%(PumaVersions.VERSION_BUILD)</VersionBuild>
+      <VersionBuild Condition="'$(PumaVersionBuild)'==''">%(PumaVersions.VERSION_BUILD)</VersionBuild>
       <VersionRevision>%(PumaVersions.VERSION_REVISION)</VersionRevision>
     </PropertyGroup>
     <ReadLinesFromFile File=".\Properties\AssemblyVersion.template">
@@ -90,6 +90,7 @@
     <Compile Include="AttributesValuesMap.cs" />
     <Compile Include="ComponentPuma.cs" />
     <Compile Include="ComponentLibraryInfo.cs" />
+    <Compile Include="ComponentPumaBulkInput.cs" />
     <Compile Include="ComponentReportsDisplay.cs" />
     <Compile Include="ComponentReportsUnpacker.cs" />
     <Compile Include="AttributeParameter.cs" />
@@ -99,9 +100,10 @@
     <Compile Include="AttributeForm.Designer.cs">
       <DependentUpon>AttributeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentPumaShared.cs" />
     <Compile Include="InteropWrapper.cs" />
     <Compile Include="Properties\AssemblyVersion.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" >
+    <Compile Include="Properties\AssemblyInfo.cs">
       <DependentUpon>Properties\AssemblyVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -114,6 +116,7 @@
     <Compile Include="ReportAttribute.cs" />
     <Compile Include="RuleAttribute.cs" />
     <Compile Include="RuleAttributesMap.cs" />
+    <Compile Include="RulePackage.cs" />
     <Compile Include="RulePackageParam.cs" />
     <Compile Include="SerializationIDs.cs" />
     <Compile Include="Utils.cs" />

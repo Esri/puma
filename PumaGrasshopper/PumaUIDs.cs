@@ -28,6 +28,7 @@ namespace PumaGrasshopper
     public static class PumaUIDs
     {
         public static Guid ComponentPumaGuid = new Guid("ad54a111-cdbc-4417-bddd-c2195c9482d8");
+        public static Guid ComponentPumaBulkInputGuid = new Guid("03FB28F9-FF2E-4175-B75B-571E4DC26FE9");
         public static Guid ComponentReportsDislayGuid = new Guid("316524f4-1c56-41e7-9315-10f60b35cd61");
         public static Guid ComponentReportsUnpackerGuid = new Guid("23602a6d-1137-4403-867a-082e001ca707");
 

@@ -322,5 +322,21 @@ namespace PumaGrasshopper
         {
             return "Could not cast attribute " + attribute + " to " + castTarget;
         }
+
+        public static KeyValuePair<string, string[]> ParseInputPair(IGH_Goo input)
+        {
+            if (!input.CastTo(out string value)) throw new Exception("Could not cast input pair to string");
+
+            string[] tokens = StringFromCeArray(value);
+
+            if(tokens.Length >= 2)
+            {
+                return new KeyValuePair<string, string[]>(tokens[0], tokens.Skip(1).ToArray());
+            }
+            else
+            {
+                throw new Exception("Could not cast input pair to string");
+            }
+        }
     }
 }
