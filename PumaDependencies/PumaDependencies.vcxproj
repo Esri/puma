@@ -14,7 +14,7 @@
     <ProjectName>Dependencies</ProjectName>
   </PropertyGroup>
   <PropertyGroup>
-    <PRTUrl>https://github.com/Esri/cityengine-sdk/releases/download/3.3.11669/esri_ce_sdk-3.3.11669-win10-vc1438-x86_64-rel-opt.zip</PRTUrl>
+    <PRTUrl>https://github.com/Esri/cityengine-sdk/releases/download/3.4.12206/esri_ce_sdk-3.4.12206-win10-vc1444-x86_64-rel-opt.zip</PRTUrl>
     <OutputDirectory>$(SolutionDir)build\</OutputDirectory>
     <DependencyDir>$(SolutionDir)deps\</DependencyDir>
   </PropertyGroup>
