@@ -34,7 +34,7 @@ properties([ disableConcurrentBuilds() ])
 @Field final String DOCKER_WS_WINDOWS = "c:/temp/puma/ws"
 
 @Field final Map WINDOWS_DOCKER_CONFIG = [ ba: DOCKER_AGENT_WINDOWS, ws: DOCKER_WS_WINDOWS ]
-@Field final Map WINDOWS_NATIVE_CONFIG = [ os: cepl.CFG_OS_WIN10, bc: cepl.CFG_BC_REL, tc: cepl.CFG_TC_VC1437, cc: cepl.CFG_CC_OPT, arch: cepl.CFG_ARCH_X86_64 ]
+@Field final Map WINDOWS_NATIVE_CONFIG = [ os: cepl.CFG_OS_WIN10, bc: cepl.CFG_BC_REL, tc: cepl.CFG_TC_VC1444, cc: cepl.CFG_CC_OPT, arch: cepl.CFG_ARCH_X86_64 ]
 
 @Field final Map RHINO7_CONFIG = [ rh: '7.17.22102.5001',  rhsdk: '7.19.22165.13001', py: '3.9.13' ]
 @Field final Map RHINO8_CONFIG = [ rh: '8.8.24163.12481',  rhsdk: '8.8.24163.12481',  py: '3.9.13' ]
